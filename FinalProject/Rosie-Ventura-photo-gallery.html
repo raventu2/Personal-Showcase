@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Photo Gallery</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://raventu2.heyuhnem.com/FinalProject/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://raventu2.heyuhnem.com/FinalProject/css/business-casual.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none">Photo Gallery</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-direction.html">Directions</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-youtube.html">Youtube</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-photo-gallery.html">Photo Gallery</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/sitemap.html">Sitemap</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-lower">Photo Gallery</span>
+                        </h2>
+                        <p>
+                            The purpose of this page is use JavaScript to be able to enlage a picture on click.
+                            The images should be able to be clicked on and function properly. The photo gallery 
+                            will have some pictures about the University of Houston.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <div class="row">
+                            <div class="column">
+                                <img src="https://raventu2.heyuhnem.com/FinalProject/img/smalluhred.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="small1">
+                            </div>
+                            <div class="column">
+                                <img src="https://raventu2.heyuhnem.com/FinalProject/img/smallfaq.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="small2">
+                            </div>
+                            <div class="column">
+                                <img src="https://raventu2.heyuhnem.com/FinalProject/img/smallnight.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="small3">
+                            </div>
+                            <div class="column">
+                                <img src="https://raventu2.heyuhnem.com/FinalProject/img/smalluhlibrary.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="small4">
+                            </div>
+                            <div class="column">
+                                <img src="https://raventu2.heyuhnem.com/FinalProject/img/smalluhstatue.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" alt="small5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 5</div>
+                <img src="https://raventu2.heyuhnem.com/FinalProject/img/uhred.jpg" alt="big1">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 5</div>
+                <img src="https://raventu2.heyuhnem.com/FinalProject/img/faq.jpg" alt="big2">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 5</div>
+                <img src="https://raventu2.heyuhnem.com/FinalProject/img/night.jpg" alt="big3">
+            </div>
+
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="https://raventu2.heyuhnem.com/FinalProject/img/uhlibrary.jpg" alt="big4">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                <img src="https://raventu2.heyuhnem.com/FinalProject/img/uhstatue.jpg" alt="big5">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+    <footer class="footer text-faded text-center py-5">
+        <p class="m-0 small">&copy;</p>
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://raventu2.heyuhnem.com/FinalProject/vendor/jquery/jquery.min.js"></script>
+    <script src="https://raventu2.heyuhnem.com/FinalProject/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

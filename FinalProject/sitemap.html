@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sitemap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://raventu2.heyuhnem.com/FinalProject/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="https://raventu2.heyuhnem.com/FinalProject/css/business-casual.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none">Sitemap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-direction.html">Directions</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-youtube.html">Youtube</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/Rosie-Ventura-photo-gallery.html">Photo Gallery</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="https://raventu2.heyuhnem.com/FinalProject/sitemap.html">Sitemap</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section about-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">SiteMap</span>
+                        </h2>
+                        <p class="mb-0">The purpose of this page is to be able to display the sitemap.xml page by using a HTML type document.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+
+
+
+                        <script>
+
+
+                            /*------------------------ vars ------------------------*/
+                            var file = "https://raventu2.heyuhnem.com/FinalProject/sitemap.xml";
+
+
+                            /*------------------------ parser ------------------------*/
+                            var Connect = new XMLHttpRequest();
+                            Connect.open("GET", file, false);
+                            Connect.setRequestHeader("Content-Type", "text/xml");
+                            Connect.send(null);
+                            var TheDocument = Connect.responseXML;
+                            var XMLs = TheDocument.childNodes[0];
+
+
+                            /*------------------------ output ------------------------*/
+                            document.write("<table>");
+                            document.write("<tr><th>URL</th><th>Date Modified</th><th>Change</th><th>Frequency Priority</th></tr>");
+
+                            for (var i = 0; i < XMLs.children.length; i++) {
+                                var XML = XMLs.children[i];
+
+                                var URL = XML.getElementsByTagName("loc");
+                                var DATE = XML.getElementsByTagName("lastmod");
+                                var CHANGE = XML.getElementsByTagName("changefreq");
+                                var FREQPR = XML.getElementsByTagName("priority");
+
+
+
+                                document.write("<tr><td>");
+                                document.write(URL[0].textContent.toString());
+                                document.write("</td><td>");
+                                document.write(DATE[0].textContent.toString());
+                                document.write("</td><td>");
+                                document.write(CHANGE[0].textContent.toString());
+                                document.write("</td><td>");
+                                document.write(FREQPR[0].textContent.toString());
+                                document.write("</td></tr>");
+
+                            }//for
+
+                            document.write("</table>");
+
+
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer text-faded text-center py-5">
+        <p class="m-0 small">&copy;</p>
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://raventu2.heyuhnem.com/FinalProject/vendor/jquery/jquery.min.js"></script>
+    <script src="https://raventu2.heyuhnem.com/FinalProject/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
